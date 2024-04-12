@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Activities - Beloved Grace Church</title>
+    <link rel = "shortcut icon" type = "x-icon" href = "images/logo.png">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-image: url('images/church.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            color: #ffffff;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+        .container {
+            max-width: 1366px;
+            margin: 0 auto;
+            flex: 1;
+            display: grid;
+            grid-template-columns: repeat(12, 1fr);
+            grid-gap: 20px;
+        }
+        .navbar {
+            background-color: rgba(0, 0, 0, 0.7);
+            padding: 15px;
+            border-radius: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            grid-column: 1 / -1;
+        }
+        .logo h1 {
+            color: #fff;
+            text-transform: uppercase;
+            margin-left: 2%;
+        }
+        .logo {
+            display: flex;
+            align-items: center;
+        }
+        .logo img {
+            width: 80px;
+            height: auto;
+            border-radius: 50%;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+            filter: grayscale(50%);
+            transition: all 0.3s ease;
+            margin-right: 10px;
+        }
+        .menu ul {
+            list-style: none;
+            padding-left: 0;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+        .menu ul li a {
+            text-decoration: none;
+            color: #ffffff;
+            font-size: 16px;
+            transition: color 0.3s ease;
+        }
+        .menu ul li a:hover {
+            color: #ffd700;
+        }
+        .body-content {
+            margin-top: 20px;
+            grid-column: 1 / -1;
+            display: flex;
+            justify-content: center; 
+            align-items: center; 
+            flex-wrap: wrap; 
+        }
+        .member {
+            position: relative;
+            border-radius: 10px;
+            overflow: hidden;
+            background-color: #ffffff;
+            color: #000;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            width: 80vw; 
+            max-width: 400px; 
+            margin: 20px;
+            transition: transform 0.3s ease;
+        }
+        .member img {
+            width: 100%;
+            height: auto;
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+        }
+        .member .info {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(255, 255, 255, 0.9);
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            text-align: left;
+            opacity: 0;
+            transition: opacity 0.5s ease;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+        .member:hover {
+            transform: scale(1.05);
+        }
+        .member h2 {
+            animation: slide 15s linear infinite;
+            white-space: nowrap;
+            overflow: hidden;
+        }
+        @keyframes slide {
+            0% {
+                transform: translateX(100%);
+            }
+            100% {
+                transform: translateX(-100%);
+            }
+        }
+        .member:hover .info {
+            opacity: 1;
+            z-index: 1;
+        }
+        .slider-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            position: relative;
+            width: 100%;
+            margin-top: 20px;
+            overflow: hidden;
+        }
+        .prev-button,
+        .next-button {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: #ffd700;
+            border: none;
+            color: #000;
+            padding: 10px 20px;
+            cursor: pointer;
+            z-index: 1;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+        .prev-button {
+            left: 10px;
+        }
+        .next-button {
+            right: 10px;
+        }
+        @media (max-width: 768px) {
+            .member {
+                width: 90vw; 
+                max-width: none; 
+            }
+        }
+        @media (max-width: 480px) {
+            .member {
+                width: 95vw; 
+            }
+        }
+        .footer {
+            background-color: rgba(0, 0, 0, 0.7);
+            color: #fff;
+            text-align: center;
+            padding: 20px 0;
+            margin-top: 40px;
+            border-radius: 10px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+            grid-column: 1 / -1;
+        }
+        .footer p {
+            margin: 10px 0;
+        }
+        .footer a {
+            color: #ffd700;
+            transition: color 0.3s ease;
+        }
+        .footer a:hover {
+            color: #ffffff;
+        }
+        .heading h1 {
+    animation: fadeIn 2s ease-out;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="navbar">
+            <div class="logo">
+                <img src="images/logo.png" width="50px"/>
+                <h1>Beloved Grace Church</h1>
+            </div>
+            <div class="menu">
+                <ul>
+                    <li><a href="Main.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="what.html">What We Believe</a></li>
+                    <li><a href="Activities.html"><u>Activities</u></a></li>
+                    <li><a href="members.html">Members</a></li>
+                    <li><a href="news.html">News</a></li>
+                    <li><a href="contacts.html">Contact</a></li>
+                    <li><a href="developers.html">Developers</a></li>
+                </ul>
+                <div class="heading">
+                    <h1>Activities Page</h1>
+                </div>
+            </div>
+        </div>
+       
+        <div class="body-content">
+            <div class="slider-container">
+                <div class="member">
+                    <h2>You are GOD'S Beloved</h2>
+                    <h4>March 12, 2024</h4>
+                    <img src="images/act1.jpg" alt="a1 Image">
+                    <p class="info">As we gather for our Annual Thanksgiving celebration, we wholeheartedly accept the profound truth of God's love for us. Through Jesus Christ, we are deeply cherished and abundantly blessed. Now, let us move forward with confidence in God's intention for our well-being and success in every aspect of life. </p>
+                </div>
+               
+                <div class="member">
+                    <h2>Annual Thanksgiving</h2>
+                    <h4>March 3,2024</h4>
+                    <img src="images/act2.jpg" alt="Sunday Worship Image">
+                    <p class="info">
+                        Every year, the beloved Grace Church gathers in grateful celebration for their annual Thanksgiving event. Parishioners from all walks of life come together in the warm embrace of fellowship and gratitude. Amidst the rustic charm of the church's halls, adorned with autumnal decorations, families and friends share stories of blessings and give thanks for the abundance in their lives. </p>
+                </div>
+                <div class="member">
+                    <h2>Life in Focus</h2>
+                    <h4>March 20, 2024</h4>
+                    <img src="images/act3.jpg" alt="Resurrection Image">
+                    <p class="info">In the first installment of "Life in Focus," we delve into the profound journey of self-discovery and mindfulness. As we navigate the complexities of modern existence, this series aims to illuminate the path towards a more purposeful and fulfilling life. Through introspection, mindfulness practices, and the cultivation of meaningful connections, we strive to find clarity amidst the chaos. Join us on this transformative expedition as we embark on a quest to live intentionally and embrace the beauty of each moment.</p>
+                </div>
+                <div class="member">
+                    <h2>Life in Focus 2</h2>
+                    <h4>March 28, 2024</h4>
+                    <img src="images/act4.jpg" alt="Resurrection Image">
+                    <p class="info">
+                        In the first installment of "Life in Focus," we delve into the profound journey of self-discovery and mindfulness. As we navigate the complexities of modern existence, this series aims to illuminate the path towards a more purposeful and fulfilling life. Through introspection, mindfulness practices, and the cultivation of meaningful connections, we strive to find clarity amidst the chaos. Join us on this transformative expedition as we embark on a quest to live intentionally and embrace the beauty of each moment.</p>
+                </div>
+                <div class="member">
+                    <h2>The Gosipel</h2>
+                    <h4>March 31, 2024</h4>
+                    <img src="images/act5.jpg" alt="Resurrection Image">
+                    <p class="info">
+                        "The Gospel" refers to the teachings and message of Jesus Christ as recorded in the New Testament of the Bible. It encompasses the central themes of love, forgiveness, salvation, and the Kingdom of God. The word "gospel" itself means "good news," reflecting the belief that Jesus' life, death, and resurrection offer redemption and hope to humanity
+                    </p>
+                </div>
+                <div class="member">
+                    <h2>What is Gospel?</h2>
+                    <h4>April 6, 2024</h4>
+                    <img src="images/act6.jpg" alt="Resurrection Image">
+                    <p class="info">Christians regard the four canonical Gospels—Matthew, Mark, Luke, and John—as the primary sources of Jesus' teachings and the foundation of their faith. The Gospel serves as a guide for believers, encouraging them to live lives of compassion, service, and devotion to God and others.</p>
+                </div>
+                <div class="member">
+                    <h2>Movie Break Time</h2>
+                    <h4>March 28, 2024</h4>
+                    <img src="images/act7.jpg" alt="Resurrection Image">
+                    <p class="info">Join us for a heartwarming movie time at Beloved Grace Church! Gather with friends and family in the cozy fellowship hall as we screen a beloved film that inspires faith and uplifts spirits. With popcorn in hand and laughter in the air, come experience the joy of community and the magic of cinema. It's an evening of wholesome entertainment and cherished memories you won't want to miss. See you there!</p>
+                </div>
+                <div class="member">
+                    <h2>Resurrection Sunday</h2>
+                    <h4>August 27, 2023</h4>
+                    <img src="images/act8.jpg" alt="Resurrection Image">
+                    <p class="info">Beloved Grace Church is honored to welcome a distinguished guest speaker to our congregation. With profound wisdom and heartfelt conviction, our guest speaker will share insights that inspire and uplift. Join us as we gather in eager anticipation, ready to be enlightened and encouraged by their message of faith, hope, and love.  Don't miss this special opportunity to be inspired and transformed by the words of our esteemed guest speaker at Beloved Grace Church.
+                    </p>
+                </div>
+                <div class="member">
+                    <h2>Launching of SGC in App</h2>
+                    <h4>July 10 , 2024</h4>
+                    <img src="images/act9.jpg" alt="Resurrection Image">
+                    <p class="info">
+                        We are thrilled to announce the launch of Beloved Grace Church on the Holy Bible app! Now, our community can come together in prayer, reflection, and study anytime, anywhere. With easy access to sermons, devotionals, and interactive features, this digital platform extends the reach of our ministry beyond the walls of our physical church. Join us as we embark on this exciting journey of faith, embracing technology to deepen our connection to God and each other. </p>
+                </div>                    
+            </div>
+            <button class="prev-button">Previous</button>
+            <button class="next-button">Next</button>
+        </div>
+
+        <footer class="footer">
+            <p>&copy; 2024 Beloved Grace Church. All rights reserved.</p>
+            <p>Follow us on <a href="#">Facebook</a>, <a href="#">Instagram</a>, and <a href="https://www.facebook.com/belovedgracechurch/about">Twitter</a>.</p>
+        </footer>
+    </div>
+
+    <script>
+        const sliderContainer = document.querySelector('.slider-container');
+        const prevButton = document.querySelector('.prev-button');
+        const nextButton = document.querySelector('.next-button');
+        let slideIndex = 0;
+
+        function showSlides() {
+            const slides = document.querySelectorAll('.member');
+            slides.forEach(slide => {
+                slide.style.display = 'none';
+            });
+            slides[slideIndex].style.display = 'block';
+        }
+
+        function slideNext() {
+            slideIndex++;
+            if (slideIndex >= sliderContainer.children.length) {
+                slideIndex = 0;
+            }
+            showSlides();
+        }
+
+        function slidePrev() {
+            slideIndex--;
+            if (slideIndex < 0) {
+                slideIndex = sliderContainer.children.length - 1;
+            }
+            showSlides();
+        }
+
+        
+        showSlides();
+
+        
+        nextButton.addEventListener('click', slideNext);
+        prevButton.addEventListener('click', slidePrev);
+    </script>
+</body>
+</html>

@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacts - Beloved Grace Church</title>
+    <link rel = "shortcut icon" type = "x-icon" href = "images/logo.png">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
+    <style>
+         * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-image: url('images/church.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            color: #ffffff;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+        .container {
+            max-width: 1366px;
+            margin: 0 auto;
+            flex: 1;
+            display: grid; 
+            grid-template-columns: repeat(12, 1fr); 
+            grid-gap: 20px; 
+        }
+        .navbar {
+            background-color: rgba(0, 0, 0, 0.7);
+            padding: 15px;
+            border-radius: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            grid-column: 1 / -1; 
+        }
+        .logo h1 {
+            color: #fff;
+            text-transform: uppercase;
+            margin-left: 2%;
+        }
+        .logo {
+            display: flex;
+            align-items: center;
+        }
+
+        .logo img {
+            width: 80px;
+            height: auto;
+            border-radius: 50%;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+            filter: grayscale(50%);
+            transition: all 0.3s ease;
+            margin-right: 10px; 
+        }
+        .menu ul {
+            list-style: none;
+            padding-left: 0;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+        .menu ul li a {
+            text-decoration: none;
+            color: #ffffff;
+            font-size: 16px;
+            transition: color 0.3s ease;
+        }
+        .menu ul li a:hover {
+            color: #ffd700;
+        }
+        .body-content {
+            margin-top: 20px;
+            grid-column: 1 / -1; 
+        }
+        .heading h1 {
+            animation: fadeIn 2s ease-out;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+        @media (max-width: 768px) {
+            .navbar {
+                padding: 1px; 
+            }
+            .menu ul {
+                justify-content: center; 
+            }
+            .menu ul li {
+                padding: 0 5px; 
+            }
+            .menu ul li a {
+                font-size: 14px;
+            }
+        }
+        .member {
+            position: relative;
+            border-radius: 10px; 
+            overflow: hidden; 
+            margin-bottom: 20px; 
+            background-color: #ffffff; 
+            color: #000; 
+            padding: 20px; 
+            grid-column: span 2; 
+        }
+
+        .member img {
+            width: 100%; 
+            height: auto; 
+            border-radius: 10px; 
+            display: block;
+            margin: 0 auto; 
+            cursor: pointer; 
+            transition: transform 0.3s ease; 
+        }
+
+        .overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.7); 
+            z-index: 999; 
+            display: none; 
+        }
+
+        .member:hover .overlay {
+            display: block; 
+        }
+
+        .member:hover img {
+            transform: scale(2); 
+            z-index: 1000; 
+        }
+
+        .popup {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            display: none; 
+            z-index: 1001; 
+        }
+
+        .member:hover .popup {
+            display: block; 
+        }
+
+        .popup img {
+            max-width: 40%;
+            max-height: 40%;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+        }
+       
+        .footer {
+            background-color: rgba(0, 0, 0, 0.7);
+            color: #fff;
+            text-align: center;
+            padding: 20px 0;
+            margin-top: 40px;
+            border-radius: 10px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+            grid-column: 1 / -1; 
+        }
+        .footer p {
+            margin: 10px 0;
+        }
+        .footer a {
+            color: #ffd700;
+            transition: color 0.3s ease;
+        }
+        .footer a:hover {
+            color: #ffffff;
+        }
+
+        
+        .popup-checkbox {
+            display: none;
+        }
+
+        .popup-checkbox:checked + .popup {
+            display: block;
+        }
+
+        .popup-checkbox:checked + .popup + .overlay {
+            display: block;
+        }
+        .membership-link {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #ffd700;
+    color: #000;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.membership-link:hover {
+    background-color: #ffa500; 
+}
+
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="navbar">
+        <div class="logo">
+            <img src="images/logo.png" width="50px"/>
+            <h1>Beloved Grace Church</h1>
+        </div>
+        <div class="menu">
+            <ul>
+                <li><a href="Main.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="what.html">What We Believe</a></li>
+                <li><a href="Activities.html">Activities</a></li>
+                <li><a href="members.html">Members</a></li>
+                <li><a href="news.html">News</a></li>
+                <li><a href="contacts.html"><u>Contact</u></a></li>
+                <li><a href="developers.html">Developers</a></li>
+            </ul>
+        </div>
+       
+       
+    </div>
+    <div class="body-content">
+        
+        <div class="member">
+            <h2>Address:</h2>
+            <h2 class="info">2/F Anmar Building, 3rd Street, 10th Avenue, Caloocan, Philippines</h2>
+            <input type="checkbox" id="address-popup-checkbox" class="popup-checkbox">
+            <div class="popup" id="address-popup">
+                <img src="images/maps.png" alt="maps">
+            </div>
+            <div class="overlay" id="address-overlay"></div>
+        </div>
+        <div class="member">
+            <h2>Phone:</h2>
+            <h2 class="info">0995 733 9807</h2>
+            <input type="checkbox" id="phone-popup-checkbox" class="popup-checkbox">
+            <div class="popup" id="phone-popup">
+                <img src="images/phone.jpg"/>
+            </div>
+            <div class="overlay" id="phone-overlay"></div>
+        </div>
+        <div class="member">
+            <h2>Want To Become a Member?</h2>
+            <h3>Click this Button</h3>
+            <a href="form.html" target="_blank" class="membership-link">Membership Form</a>
+        </div>
+        
+    </div>
+    <footer class="footer">
+        <p>&copy; 2024 Beloved Grace Church. All rights reserved.</p>
+        <p>Follow us on <a href="https://www.facebook.com/belovedgracechurch/about">Facebook</a>, <a href="https://www.facebook.com/belovedgracechurch">Instagram</a>, and <a href="#">Twitter</a>.</p>
+    </footer>
+</div>
+
+</body>
+</html>

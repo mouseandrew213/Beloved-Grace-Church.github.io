@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Members - Beloved Grace Church</title>
+    <link rel = "shortcut icon" type = "x-icon" href = "images/logo.png">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        html{
+            font-family: 'Poppins', sans-serif;
+        }
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-image: url('images/church.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            color: #ffffff;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+        .container {
+            max-width: 1366px;
+            margin: 0 auto;
+            flex: 1;
+            display: grid; 
+            grid-template-columns: repeat(12, 1fr);
+            grid-gap: 20px; 
+        }
+        .navbar {
+            background-color: rgba(0, 0, 0, 0.7);
+            padding: 15px;
+            border-radius: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+        
+            grid-column: 1 / -1; 
+        }
+        .logo h1 {
+            color: #fff;
+            text-transform: uppercase;
+            margin-left: 2%;
+        }
+        .logo {
+            display: flex;
+            align-items: center;
+        }
+
+        .logo img {
+            width: 80px;
+            height: auto;
+            border-radius: 50%;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+            filter: grayscale(50%);
+            transition: all 0.3s ease;
+            margin-right: 10px; 
+        }
+        .menu ul {
+            list-style: none;
+            padding-left: 0;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+        .menu ul li a {
+            text-decoration: none;
+            color: #ffffff;
+            font-size: 16px;
+            transition: color 0.3s ease;
+        }
+        .menu ul li a:hover {
+            color: #ffd700;
+        }
+        .body-content {
+            margin-top: 20px;
+            grid-column: 1 / -1; 
+            display: grid; 
+            grid-template-columns: repeat(12, 1fr); 
+            grid-gap: 20px; 
+        }
+        .member {
+            position: relative;
+            border-radius: 10px; 
+            overflow: hidden;
+            background-color: #ffffff; 
+            color: #000; 
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            grid-column: span 3; 
+            grid-row: span 3; 
+            transition: transform 0.3s ease; 
+        }
+        .member:hover {
+            transform: scale(1.15); /* Increase size on hover */
+        }
+        .member .info {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(244, 226, 226, 0.9);
+            border-radius: 0px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            text-align: left;
+            opacity: 0;
+            transition: opacity 2s ease;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+        .member:hover .info {
+            opacity: 1;
+        }
+        .member img {
+            width: 100%;
+            height: auto; 
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+        }
+        .footer {
+            background-color: rgba(0, 0, 0, 0.7);
+            color: #fff;
+            text-align: center;
+            padding: 20px 0;
+            margin-top: 40px;
+            border-radius: 10px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+            grid-column: 1 / -1; 
+        }
+        .footer p {
+            margin: 10px 0;
+        }
+        .footer a {
+            color: #ffd700;
+            transition: color 0.3s ease;
+        }
+        .footer a:hover {
+            color: #ffffff;
+        }
+        @media (max-width: 768px) {
+            .navbar {
+                padding: 1px; 
+            }
+            .menu ul {
+                justify-content: center; 
+            }
+            .menu ul li {
+                padding: 0 5px;
+            }
+            .menu ul li a {
+                font-size: 14px; 
+            }
+            .member .info {
+                font-size: 14px; 
+            }
+        }
+        .heading h1{
+           text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="navbar">
+            <div class="logo">
+                <img src="images/logo.png" width="50px" alt="logo">
+                <h1>Beloved Grace Church</h1>
+            </div>
+            <div class="menu">
+                <ul>
+                    <li><a href="Main.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="what.html">What We Believe</a></li>
+                    <li><a href="Activities.html">Activities</a></li>
+                    <li><a href="members.html"><u>Members</u></a></li>
+                    <li><a href="news.html">News</a></li>
+                    <li><a href="contacts.html">Contact</a></li>
+                    <li><a href="developers.html">Developers</a></li>
+                </ul>
+                <div class="heading">
+                    <h1>Admin Page</h1>
+                </div>
+            </div>
+        </div>
+        <div class="body-content">
+            <div class="member">
+                <h2>Martin Acha</h2>
+                <h4>(Head Pastor)</h4>
+                <img src="images/martin.png" alt="martin">
+                <p class="info">Martin is the esteemed head pastor of Beloved Grace Church, where he leads with unwavering dedication and a heart brimming with compassion. With a profound commitment to nurturing spiritual growth and fostering a sense of community, Martin serves as a guiding light for congregants seeking solace, guidance, and connection. His eloquent sermons resonate deeply, weaving together timeless wisdom with contemporary insights, and his warm demeanor creates an atmosphere of welcome and acceptance for all who enter the church's doors.</p>
+            </div>
+            <div class="member">
+                <h2>Berna Acha</h2>
+                <h4>(Head Pastor)</h4>
+                <img src="images/berna.png" alt="berna">
+                <p class="info">Berna Acha is a dynamic individual with a passion for making a positive impact in her community. As a dedicated advocate for social justice and equality, Berna tirelessly works to empower marginalized voices and create pathways for change. Whether through grassroots organizing, public speaking, or community outreach initiatives, she consistently demonstrates a strong commitment to fostering inclusivity and promoting dialogue. Berna's unwavering determination and compassionate spirit inspire those around her to strive for a more just and equitable society.</p>
+            </div>
+            <div class="member">
+                <h2>Remz Fernandez</h2>
+                <h4>(Pastor)</h4>
+                <img src="images/remz.jpg.png" alt="remz">
+                <p class="info">Remz Fernandez is a creative powerhouse, renowned for his remarkable talent and innovative approach to the arts. Whether through his mesmerizing music, captivating visual art, or compelling storytelling, Remz consistently pushes the boundaries of creativity and expression. With an unparalleled ability to fuse different mediums and genres, he crafts narratives that resonate deeply with audiences worldwide, leaving an indelible mark on the cultural landscape.</p>
+            </div>
+            <div class="member">
+                <h2>Jerome Fernandez</h2>
+                <h4>(Pastor)</h4>
+                <img src="images/jerome.jpg.png" alt="jerome">
+                <p class="info">Jerome Fernandez is a visionary leader and compassionate advocate, dedicated to creating positive change in his community and beyond. With a keen intellect and a heart full of empathy, Jerome tirelessly works to address social issues and champion the rights of the marginalized. As a respected figure in both local and global spheres, he inspires others to join him in his pursuit of justice and equality for all.</p>
+            </div>
+        </div>
+        <footer class="footer">
+            <p>&copy; 2024 Beloved Grace Church. All rights reserved.</p>
+            <p>Follow us on <a href="https://www.facebook.com/belovedgracechurch/about">Facebook</a>, <a href="#">Instagram</a>, and <a href="#">Twitter</a>.</p>
+        </footer>
+    </div>
+   
+</body>
+</html>

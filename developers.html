@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Developers - Beloved Grace Church</title>
+    <link rel = "shortcut icon" type = "x-icon" href = "images/logo.png">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
+    <style>
+       * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-image: url('images/church.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            color: #ffffff;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+        .container {
+            max-width: 1366px;
+            margin: 0 auto;
+            flex: 1;
+            display: grid; 
+            grid-template-columns: repeat(12, 1fr); 
+            grid-gap: 20px; 
+        }
+        .navbar {
+            background-color: rgba(0, 0, 0, 0.7);
+            padding: 15px;
+            border-radius: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            grid-column: 1 / -1; 
+        }
+        .logo h1 {
+            color: #fff;
+            text-transform: uppercase;
+            margin-left: 2%;
+        }
+        .logo {
+            display: flex;
+            align-items: center;
+        }
+
+        .logo img {
+            width: 80px;
+            height: auto;
+            border-radius: 50%;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+            filter: grayscale(50%);
+            transition: all 0.3s ease;
+            margin-right: 10px; 
+        }
+        .menu ul {
+            list-style: none;
+            padding-left: 0;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+        .menu ul li a {
+            text-decoration: none;
+            color: #ffffff;
+            font-size: 16px;
+            transition: color 0.3s ease;
+        }
+        .menu ul li a:hover {
+            color: #ffd700;
+        }
+        .body-content {
+            margin-top: 20px;
+            grid-column: 1 / -1;
+            display: grid; 
+            grid-template-columns: repeat(12, 1fr); 
+            grid-gap: 20px; 
+        }
+        .member {
+            position: relative;
+            border-radius: 10px; 
+            overflow: hidden; 
+            background-color: #e7dede; 
+            color: #000; 
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            grid-column: span 4;
+            transition: transform 0.3s ease; 
+        }
+        .member:hover {
+            transform: scale(1.05); 
+        }
+        .member .info {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(247, 245, 245, 0.9);
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            text-align: left;
+            opacity: 0;
+            transition: opacity 0.5s ease;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+        .member:hover .info {
+            opacity: 1;
+        }
+        .member img {
+            width: 100%; 
+            height: auto; 
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+        }
+        .footer {
+            background-color: rgba(0, 0, 0, 0.7);
+            color: #fff;
+            text-align: center;
+            padding: 20px 0;
+            margin-top: 40px;
+            border-radius: 10px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+            grid-column: 1 / -1; 
+        }
+        .footer p {
+            margin: 10px 0;
+        }
+        .footer a {
+            color: #ffd700;
+            transition: color 0.3s ease;
+        }
+        .footer a:hover {
+            color: #ffffff;
+        }
+        @media (max-width: 768px) {
+            .navbar {
+                padding: 1px; 
+            }
+            .menu ul {
+                justify-content: center; 
+            }
+            .menu ul li {
+                padding: 0 5px; 
+            }
+            .menu ul li a {
+                font-size: 14px; 
+            }
+            .member .info {
+                font-size: 14px; 
+            }
+        }
+        .heading h1{
+           text-align: center;
+        }
+
+
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="navbar">
+            <div class="logo">
+                <img src = "images/logo.png" width = "50px"/>
+                <h1>Beloved Grace Church</h1>
+            </div>
+            <div class="menu">
+                <ul>
+                    <li><a href="Main.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="what.html">What We Believe</a></li>
+                    <li><a href="Activities.html">Activities</a></li>
+                    <li><a href="members.html">Members</a></li>
+                    <li><a href="news.html">News</a></li>
+                    <li><a href="contacts.html">Contact</a></li>
+                    <li><a href="developers.html"><u>Developers</u></a></li>
+                </ul>
+                <div class="heading">
+                    <h1>Developers Page</h1>
+                </div>
+            </div>
+        </div>
+        <div class="body-content">
+           
+            <div class="member">
+                <marquee><h2>James Santos</h2></marquee>
+                <img src="images/james.png" alt="James Image">
+                <p class = "info">
+                    <b>James Andrew Santos</b>, the virtuoso developer of the Beloved Grace Church website, ingeniously weaves HTML and CSS into a digital tapestry that embodies the essence of the church's mission. With precision and finesse, James creates an immersive online sanctuary where every element harmonizes to deliver an unparalleled user experience, seamlessly blending functionality with aesthetic allure. His expertise transcends mere coding, infusing the website with an aura of reverence and grace, inviting visitors to embark on a transformative journey within the digital realm of Beloved Grace Church.</p>
+            </div>
+            <div class="member">
+                <marquee><h2>Danreb Acha</h2></marquee>
+                <img src="images/acha.png" alt="Danreb Image">
+                <p class = "info">
+                    <b>Danreb Acha</b>, the versatile QA Analyst, Design Adviser, and Documentation expert, anchors the Beloved Grace Church website with precision and finesse. Through meticulous quality assurance, insightful design guidance, and comprehensive documentation, Danreb ensures a flawless digital sanctuary that seamlessly blends functionality with aesthetic allure, embodying the essence of Beloved Grace's mission.</p>
+            </div>
+            <div class="member">
+                <marquee><h2>Ritzmond Rivas</h2></marquee>
+                <img src="images/ritz.png" alt="ritz Image">
+                <p class = "info"><b>Ritz Rivas</b>, the meticulous Checker, Design Consultant, and Documentation expert, fortifies the Beloved Grace Church website with unparalleled precision and insight. With keen attention to detail, Ritz ensures flawless functionality and aesthetics, advising on design elements that enhance user experience. Additionally, his thorough documentation ensures seamless collaboration and future improvements, embodying excellence at every level of development.</p>
+            </div>
+            
+        </div>
+        <footer class="footer">
+            <p>&copy; 2024 Beloved Grace Church. All rights reserved.</p>
+            <p>Follow us on <a href="https://www.facebook.com/belovedgracechurch/about">Facebook</a>, <a href="#">Instagram</a>, and <a href="#">Twitter</a>.</p>
+        </footer>
+    </div>
+
+
+    
+</body>
+</html>

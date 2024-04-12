@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>News - Beloved Grace Church</title>
+    <link rel = "shortcut icon" type = "x-icon" href = "images/logo.png">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-image: url('images/church.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            color: #ffffff;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+        .container {
+            max-width: 1366px;
+            margin: 0 auto;
+            flex: 1;
+            display: grid; 
+            grid-template-columns: repeat(12, 1fr); 
+            grid-gap: 20px; 
+        }
+        .navbar {
+            background-color: rgba(0, 0, 0, 0.7);
+            padding: 15px;
+            border-radius: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            grid-column: 1 / -1; 
+        }
+        .logo h1 {
+            color: #fff;
+            text-transform: uppercase;
+            margin-left: 2%;
+        }
+        .logo {
+            display: flex;
+            align-items: center;
+        }
+
+        .logo img {
+            width: 80px;
+            height: auto;
+            border-radius: 50%;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+            filter: grayscale(50%);
+            transition: all 0.3s ease;
+            margin-right: 10px; 
+        }
+        .menu ul {
+            list-style: none;
+            padding-left: 0;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+        .menu ul li a {
+            text-decoration: none;
+            color: #ffffff;
+            font-size: 16px;
+            transition: color 0.3s ease;
+        }
+        .menu ul li a:hover {
+            color: #ffd700;
+        }
+        .body-content {
+            margin-top: 20px;
+            grid-column: 1 / -1; 
+            display: grid; 
+            grid-template-columns: repeat(12, 1fr); 
+            grid-gap: 20px; 
+        }
+        .member {
+            position: relative;
+            border-radius: 10px; 
+            overflow: hidden; 
+            background-color: #ffffff; 
+            color: #000; 
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            grid-column: span 4; 
+            transition: transform 0.3s ease; 
+        }
+        .member:hover {
+            transform: scale(1.05); 
+        }
+        .member .info {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(255, 255, 255, 0.9);
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            text-align: left;
+            opacity: 0;
+            transition: opacity 0.5s ease;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+        .member:hover .info {
+            opacity: 1;
+        }
+        .member img {
+            width: 100%; 
+            height: auto; 
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+        }
+        .footer {
+            background-color: rgba(0, 0, 0, 0.7);
+            color: #fff;
+            text-align: center;
+            padding: 20px 0;
+            margin-top: 40px;
+            border-radius: 10px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+            grid-column: 1 / -1; 
+        }
+        .footer p {
+            margin: 10px 0;
+        }
+        .footer a {
+            color: #ffd700;
+            transition: color 0.3s ease;
+        }
+        .footer a:hover {
+            color: #ffffff;
+        }
+        @media (max-width: 768px) {
+            .navbar {
+                padding: 1px; 
+            }
+            .menu ul {
+                justify-content: center; 
+            }
+            .menu ul li {
+                padding: 0 5px; 
+            }
+            .menu ul li a {
+                font-size: 14px; 
+            }
+            .member .info {
+                font-size: 14px;
+            }
+        }
+        .heading h1{
+           text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="navbar">
+            <div class="logo">
+                <img src="images/logo.png" width="50px"/>
+                <h1>Beloved Grace Church</h1>
+            </div>
+            <div class="menu">
+                <ul>
+                    <li><a href="Main.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="what.html">What We Believe</a></li>
+                    <li><a href="Activities.html">Activities</a></li>
+                    <li><a href="members.html">Members</a></li>
+                    <li><a href="news.html"><u>News</u></a></li>
+                    <li><a href="contacts.html">Contact</a></li>
+                    <li><a href="developers.html">Developers</a></li>
+                </ul>
+                <div class="heading">
+                    <h1>News Page</h1>
+                </div>
+            </div>
+        </div>
+       
+        <div class="body-content">
+          
+            <div class="member">
+                <marquee><h2>First Love Never Dies</h2>
+                <h4>March 12,2024<br>
+        
+                </h4></marquee> 
+                <img src="images/res-2.jpg" alt="Sunday Worship Image">
+                <p class="info">In times of uncertainty, cling to the unchanging love of God. Remember your first love, the pure and enduring connection with Him. Just as Jesus sacrificed for us, His love remains alive within us forever. So, hold fast to this truth: His love is our anchor, our strength, and our eternal source of hope. </p>
+               
+            </div>
+            <div class="member">
+                <marquee><h2>Sunday Worship</h2>
+                <h4>Every 10 am</h4></marquee>
+                <img src="images/sundayworkship.jpg" alt="Sunday Worship Image">
+                <p class="info">Sunday worship at Beloved Grace Church begins at 10 am, marking a sacred time for congregation members to come together in fellowship and devotion. As the church bells chime, hearts and minds unite in reverence, ready to immerse themselves in prayer, scripture, and hymns of praise.</p>
+            </div>
+            <div class="member">
+                <marquee><h2>Resurrection Sunday</h2>
+                <h4>March 20, 2024</h4></marquee>
+                <img src="images/res-3.jpg" alt="Resurrection Image">
+                <p class="info">The Passover lamb in the Old Testament serves as a powerful reminder of God's provision, protection, and salvation. Just as the blood of the lamb spared the Israelites from judgment and brought them out of bondage, Jesus Christ, as the ultimate Passover Lamb, offers us freedom from sin and eternal life. His sacrifice on the cross assures us of God's unwavering love and mercy.</p>
+            </div>
+            <div class="member">
+                <marquee><h2>Resurrection Sunday</h2>
+                <h4>March 28, 2024</h4></marquee>
+                <img src="images/res0.jpg" alt="Resurrection Image">
+                <p class="info">In Jesus, we discover the Unleavened Bread, symbolizing purity and the absence of sin. His perfect sacrifice casts a fullness of grace where condemnation finds no place. Through Him, we stand forever righteous in the eyes of God. Let this truth be your anchor: in Christ, we find freedom, acceptance, and unending love.</p>
+            </div>
+            <div class="member">
+                <marquee><h2>Resurrection Sunday</h2>
+                <h4>March 31, 2024</h4></marquee>
+                <img src="images/res-1.jpg" alt="Resurrection Image">
+                <p class="info">Samahan niyo po kaming gunitain ang 'Linggo Ng Pagkabuhay' sa darating na ika-31 ng Marso, 2024 sa Beloved Grace Church.
+                </p>
+            </div>
+           
+            <div class="member">
+                <marquee><h2>Resurrection Sunday</h2>
+                <h4>April 6, 2024</h4></marquee>
+                <img src="images/res.jpg" alt="Resurrection Image">
+                <p class="info">Rejoice, for He has risen! Let His resurrection fill your heart with hope and joy. Celebrate the victory over darkness and embrace the promise of a brighter future. Jesus paid the ultimate price for us, offering salvation and grace.</p>
+            </div>
+           
+        </div>
+        <footer class="footer">
+            <p>&copy; 2024 Beloved Grace Church. All rights reserved.</p>
+            <p>Follow us on <a href="https://www.facebook.com/belovedgracechurch/about">Facebook</a>, <a href="#">Instagram</a>, and <a href="https://www.facebook.com/belovedgracechurch/about">Twitter</a>.</p>
+        </footer>
+    </div>
+ 
+   
+</body>
+</html>

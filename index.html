@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Main Page - Beloved Grace Church</title>
+    <link rel = "shortcut icon" type = "x-icon" href = "images/logo.png">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-image: url(images/church.jpg);
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            color: #ffffff;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            animation: fadeInAnimation 2s ease-out;
+        }
+
+        @keyframes fadeInAnimation {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        .container {
+            max-width: 1366px;
+            margin: 0 auto;
+            flex: 1;
+            display: grid; 
+            grid-template-columns: repeat(12, 1fr); 
+            grid-gap: 20px; 
+        }
+        .navbar {
+            background-color: rgba(0, 0, 0, 0.7);
+            padding: 10px;
+            border-radius: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            grid-column: 1 / -1; 
+        }
+        .logo h1 {
+            color: #fff;
+            text-transform: uppercase;
+            margin-left: 2%;
+        }
+        .logo {
+            display: flex;
+            align-items: center;
+        }
+        .logo img {
+            width: 80px;
+            height: auto;
+            border-radius: 50%;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+            filter: grayscale(50%);
+            transition: all 0.3s ease;
+            margin-right: 10px;
+        }
+        .menu ul {
+            list-style: none;
+            padding-left: 0;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+        .menu ul li a {
+            text-decoration: none;
+            color: #ffffff;
+            font-size: 16px;
+            transition: color 0.3s ease;
+        }
+        .menu ul li a:hover {
+            color: #ffd700;
+        }
+        .body-content {
+            margin-top: 20px;
+            grid-column: 1 / -1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+        .heading h1 {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        @media (max-width: 768px) {
+            .navbar {
+                padding: 1px;
+            }
+            .menu ul {
+                justify-content: center;
+            }
+            .menu ul li {
+                padding: 0 5px;
+            }
+            .menu ul li a {
+                font-size: 14px;
+            }
+        }
+        .member {
+            border-radius: 10px;
+            overflow: hidden;
+            margin-bottom: 20px;
+            background-color: #ffffff;
+            color: #000;
+            padding: 20px;
+            grid-column: span 4;
+            transition: transform 0.3s ease, background-color 0.3s ease;
+        }
+        .member img {
+            width: 100%;
+            height: auto;
+            transition: transform 0.3s ease;
+        }
+        .member:hover {
+            transform: scale(1.1);
+            background-color: #f5cece;
+            transition: 2s;
+        }
+        .member:hover img {
+            transform: scale(1.1);
+        }
+        
+        .navigation-button {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #ffd700;
+            color: #000;
+            font-size: 16px;
+            border-radius: 5px;
+            text-decoration: none;
+            transition: background-color 0.3s ease;
+            margin-top: 20px;
+        }
+        .navigation-button:hover {
+            background-color: #ffcc00;
+        }
+        .group.members {
+    border: 2px solid #ffd700;
+    border-radius: 10px;
+    padding: 10px;
+    margin-top: 20px;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.8);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    max-width: 50%; /* Adjusted max-width */
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.group.members h2 {
+    font-size: 16px; /* Decreased font size */
+    color: #000000;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+
+.group.members p {
+    font-size: 14px; /* Decreased font size */
+    line-height: 1.4;
+    color: #333333;
+}
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="navbar">
+            <div class="logo">
+                <img src="images/logo.png" width="50px"/>
+                <h1>Beloved Grace Church</h1>
+            </div>
+            <div class="menu">
+                <ul>
+                    <li><a href="Main.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="what.html">What We Believe</a></li>
+                    <li><a href="Activities.html">Activities</a></li>
+                    <li><a href="members.html">Members</a></li>
+                    <li><a href="news.html">News</a></li>
+                    <li><a href="contacts.html">Contact</a></li>
+                    <li><a href="developers.html">Developers</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="body-content">
+           
+            <div class="member">
+                <h1>Welcome To Beloved Grace Church</h1>
+                <h2 class = "group members">Members:<br>
+                    Santos, James Andrew D.<br>
+                    Acha, Danreb Elohim<br>
+                    Rivas, Ritzmond R.
+                </h2>&nbsp;&nbsp;
+                <p>"Beloved Grace" encapsulates the essence of timeless love, weaving intricate tales of affection, resilience, and the beauty found within human connections. Through its poignant narratives and vivid characters, this collection offers a glimpse into the depths of the human heart, exploring themes of forgiveness, redemption, and the enduring power of grace.
+                Beloved Grace" encapsulates the essence of timeless love, weaving intricate tales of affection, resilience, and the beauty found within human connections. Through its poignant narratives and vivid characters, this collection offers a glimpse into the depths of the human heart, exploring themes of forgiveness, redemption, and the enduring power of grace.
+                </p>
+                
+            </div>
+            
+
+            <a href="main.html" class="navigation-button">Click Here !!!</a>
+  
+     
+    </div>
+  
+</body>
+</html>
